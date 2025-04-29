@@ -1,0 +1,109 @@
+:root {
+    --border-size: 80px;
+    --triangle-size: 60px;
+    --gap: 15px;
+    --line-thickness: 2px;
+    --primary-color: #ff6b6b;
+    --secondary-color: #4ecdc4;
+    --accent-color: #ffe66d;
+    --dark-color: #292f36;
+  }
+  
+  body {
+    margin: 0;
+    background-color: var(--dark-color);
+    color: #f7fff7;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .wrapper {
+    position: relative;
+    min-height: 100vh;
+    padding: var(--border-size);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .border-pattern {
+    position: absolute;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  #left-border {
+    top: 0;
+    left: 0;
+    width: var(--border-size);
+    height: 100%;
+    background-color: var(--primary-color);
+  }
+  
+  #right-border {
+    top: 0;
+    right: 0;
+    width: var(--border-size);
+    height: 100%;
+    background-color: var(--secondary-color);
+  }
+  
+  #top-border {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--border-size);
+    background-color: var(--accent-color);
+  }
+  
+  #bottom-border {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: var(--border-size);
+    background-color: var(--secondary-color);
+  }
+  
+  .content {
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+    background-color: rgba(41, 47, 54, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  }
+  
+  .horizontal-line {
+    position: absolute;
+    height: var(--line-thickness);
+    background-color: white;
+  }
+  
+  .vertical-line {
+    position: absolute;
+    width: var(--line-thickness);
+    background-color: white;
+  }
+  
+  @media (max-width: 768px) {
+    :root {
+      --border-size: 60px;
+      --triangle-size: 40px;
+      --gap: 10px;
+    }
+    
+    .content {
+      padding: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    :root {
+      --border-size: 40px;
+      --triangle-size: 30px;
+    }
+    
+    .content {
+      padding: 15px;
+    }
+  }
